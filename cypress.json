@@ -1,0 +1,5 @@
+{
+  "defaultCommandTimeout": 10000,
+  "execTimeout": 20000,
+  "projectId": "c6rrio"
+}
