@@ -1,4 +1,5 @@
 {
+  "baseUrl": "https://app.pure360.com/",
   "defaultCommandTimeout": 10000,
   "execTimeout": 20000,
   "projectId": "c6rrio"
