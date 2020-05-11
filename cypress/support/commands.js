@@ -7,14 +7,12 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-<<<<<<< HEAD
 //
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
 //
-=======
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 Cypress.Commands.add('NavigateToMainMenu', () => 
@@ -61,12 +59,8 @@ Cypress.Commands.add("finish_list_upload", () => {
   cy.wait(1000);
   cy.contains('button','Next').click({force:true})
   cy.wait(1000);
-<<<<<<< HEAD
   cy.contains('button', 'Finish').click({force:true}) })
->>>>>>> created smoke test suite 1
-=======
   cy.contains('button','Finish').click({force:true}) })
->>>>>>> Added command files on support folder
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
 //
@@ -78,13 +72,10 @@ Cypress.Commands.add("finish_list_upload", () => {
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-import 'cypress-file-upload';
+/*import 'cypress-file-upload';
 
 
   // Thus, cy.login can be used in all other files
-<<<<<<< HEAD
-  
-=======
   import {
     byClass,
     byName,
@@ -1024,5 +1015,7 @@ import 'cypress-file-upload';
       .children('div')
       .children('select')
       .select(numberOfRecords)
+
   })
->>>>>>> Added command files on support folder
+
+
