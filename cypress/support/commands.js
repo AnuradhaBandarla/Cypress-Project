@@ -15,6 +15,9 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
+
+
+
 Cypress.Commands.add('NavigateToMainMenu', () => 
 {
   cy.get('.main-nav').find('.nav-item.ng-scope').each(($e1, index, $list)=>{

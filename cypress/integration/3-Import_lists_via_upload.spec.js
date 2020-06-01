@@ -8,11 +8,19 @@ describe('lists via import', function()
  })
       
 it('upload lists in csv format', function()
-{
-        cy.get('[p3-href="/lists"]').click();
-        cy.get('.btn.btn-success.list-import.ng-binding.ng-scope').click();
-        cy.get('[name="listname"]').type('SmokeTest-upload-happylist').type(Date.now());
-        
+{    
+                cy.get('.main-nav').find('.nav-item.ng-scope').each(($e1, index, $list)=>{
+                const menuitemtext=$e1.find('.nav-item-label.ng-binding').text()
+                
+                if(menuitemtext.includes('Lists'))
+                {
+                  $e1.find('.nav-item-label.ng-binding').click();
+                }
+             
+       //cy.get('[p3-href="/lists"]').click();
+cy.get('[data-test-id="IMPORT_CONTACTS_BUTTON"]').click();
+cy.get('[name="listname"]').type('SmokeTest-upload-happylist').type(Date.now());
+      
 
  const fileName = 'list.csv';
  cy.fixture(fileName).then(fileContent => {
@@ -24,4 +32,4 @@ cy.finish_list_upload();
        //cy.wait(1000);
 
         })}
-)                       
+)})      
