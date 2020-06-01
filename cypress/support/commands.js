@@ -62,8 +62,8 @@ Cypress.Commands.add("finish_list_upload", () => {
   cy.wait(1000);
   cy.contains('button','Next').click({force:true})
   cy.wait(1000);
-  cy.contains('button', 'Finish').click({force:true}) })
-  cy.contains('button','Finish').click({force:true}) })
+  cy.contains('button', 'Finish').click({force:true}) 
+  cy.contains('button','Finish').click({force:true}) 
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
 //
@@ -1022,3 +1022,4 @@ Cypress.Commands.add("finish_list_upload", () => {
   })
 
 
+})
